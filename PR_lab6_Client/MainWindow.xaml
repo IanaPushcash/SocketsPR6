@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PR_lab6_Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="464.817" Width="525" Closing="MainWindow_OnClosing">
+	<Grid Margin="0,0,0.4,-29.8">
+		<Button x:Name="BtnSend" Content="Send" IsEnabled="False" HorizontalAlignment="Left" Margin="423,292,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+		<TextBox x:Name="TbLogin" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+		<PasswordBox x:Name="PbPass" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top" Width="120" Height="23"/>
+		<Button x:Name="BtnLogin" Content="Log in" HorizontalAlignment="Left" Margin="322,10,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="BtnLogin_Click"/>
+		<Button x:Name="BtnReg" Content="Regestration" HorizontalAlignment="Left" Margin="423,10,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="BtnReg_Click"/>
+		<TextBox x:Name="TbChat" IsEnabled="False" HorizontalAlignment="Left" Height="193" Margin="10,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="498" IsReadOnly="True" KeyDown="TbChat_OnKeyDown"/>
+		<TextBox x:Name="TbMessage" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="10,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="498" KeyDown="TbMessage_OnKeyDown"/>
+		<CheckBox x:Name="cbIsPrivate" Content="Private" HorizontalAlignment="Left" Margin="19,292,0,0" VerticalAlignment="Top" Checked="cbIsPrivate_Checked" Unchecked="CbIsPrivate_OnUnchecked"/>
+		<TextBox x:Name="tbTo" HorizontalAlignment="Left" Height="23" Margin="80,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" IsEnabledChanged="TbTo_OnIsEnabledChanged"/>
+		<Label x:Name="label" Content="Page" HorizontalAlignment="Left" Margin="10,327,0,0" VerticalAlignment="Top"/>
+		<Label x:Name="label1" Content="Word" HorizontalAlignment="Left" Margin="10,371,0,0" VerticalAlignment="Top"/>
+		<TextBox x:Name="tbPage" HorizontalAlignment="Left" Height="23" Margin="10,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"/>
+		<TextBox x:Name="tbWord" HorizontalAlignment="Left" Height="23" Margin="10,396,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"/>
+		<Label x:Name="lbResult" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="374,353,0,0" VerticalAlignment="Top" Width="134" Height="26"/>
+		<Button x:Name="btnFind" Content="Find" HorizontalAlignment="Left" Margin="399,400,0,0" VerticalAlignment="Top" Width="75" Click="BtnFind_OnClick"/>
+
+	</Grid>
 </Window>
